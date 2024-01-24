@@ -1,7 +1,9 @@
 import React from 'react';
 import './maincontent.css';
+import { Link } from 'react-router-dom';
+
 const JobDetailsTable = ({jobDetails}) => {
-    
+  
   return (
     <table>
       <thead>
@@ -12,7 +14,7 @@ const JobDetailsTable = ({jobDetails}) => {
           <th>QP Code</th>
           <th>Category of Disability</th>
           <th>View All Cover Disability</th>
-          <th>button</th>
+          <th>Links</th>
         </tr>
       </thead>
       <tbody>
@@ -25,7 +27,9 @@ const JobDetailsTable = ({jobDetails}) => {
             <td>{job.categoryOfDisability}</td>
             <td>{job.viewAllCoverDisability.join(', ')}</td>
             <td>
-              <button>button</button>
+              <Link to="/application">
+                <button>Apply</button>
+              </Link>
             </td>
           </tr>
         ))}
@@ -33,5 +37,5 @@ const JobDetailsTable = ({jobDetails}) => {
     </table>
   );
 };
+
 export default JobDetailsTable;
-// Example usage
