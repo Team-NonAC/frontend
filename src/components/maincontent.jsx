@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './maincontent.css';
 import { Link } from 'react-router-dom';
 
 const Maincontent = ({ jobDetails, filters, onFilterChange, onRemoveDisability }) => {
+  const [filterVal, setFilterVal] = useState('');
+
   const filteredJobDetails = jobDetails.filter((job) => {
     const hasMatchingDisability = filters.disabilities.length
       ? filters.disabilities.some(disability =>
           job.viewAllCoverDisability.includes(disability)
         )
       : true;
-
     return hasMatchingDisability;
   });
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      onFilterChange('disability', filterVal);
+      setFilterVal(''); // Reset the value to ''
+    }
+  };
 
   return (
     <div>
@@ -20,8 +28,9 @@ const Maincontent = ({ jobDetails, filters, onFilterChange, onRemoveDisability }
           Disability:
           <input
             type="text"
-            value={filters.disability}
-            onChange={(e) => onFilterChange('disability', e.target.value)}
+            value={filterVal}
+            onChange={(e) => setFilterVal(e.target.value)}
+            onKeyDown={handleKeyPress}
           />
           <button onClick={() => onFilterChange('disability', '')}>
             Clear
