@@ -12,6 +12,7 @@ const JobDetailsTable = ({jobDetails}) => {
           <th>QP Code</th>
           <th>Category of Disability</th>
           <th>View All Cover Disability</th>
+          <th>button</th>
         </tr>
       </thead>
       <tbody>
@@ -23,6 +24,9 @@ const JobDetailsTable = ({jobDetails}) => {
             <td>{job.qpCode}</td>
             <td>{job.categoryOfDisability}</td>
             <td>{job.viewAllCoverDisability.join(', ')}</td>
+            <td>
+              <button>button</button>
+            </td>
           </tr>
         ))}
       </tbody>
