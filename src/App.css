@@ -1,6 +1,36 @@
-/* App.module.css */
-.container {
-    /* Styles specific to the App component */
-    /* Add your styles here */
-  }
-  
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sticky navbar styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  padding: 10px;
+  color: white;
+}
+
+/* Header styles */
+/* Header styles */
+.header {
+  min-height: 200px; /* Adjust as needed */
+  padding: 50px; /* Adjust padding as needed */
+  text-align: center;
+  background-color: #f2f2f2; /* Add a background color to the header */
+}
+
+/* Main content styles */
+.main-content {
+  padding: 20px; /* Adjust as needed */
+}
+
+/* Footer styles */
+.footer {
+  padding: 20px; /* Adjust as needed */
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
