@@ -1,0 +1,85 @@
+/* Footer.css */
+
+/* Style for the entire footer */
+footer {
+    position: relative;
+    bottom: 0;
+    z-index: 30;
+    width: 100%;
+    background-color: black; /* Adjust background color */
+    color: #ffffff; /* Adjust text color */
+    transition: background-color 0.3s;
+  }
+  
+  /* Style for the container within the footer */
+  .container {
+    max-width: 1200px; /* Adjust max-width */
+    margin: 0 auto;
+    padding: 2rem 1rem; /* Adjust top and bottom padding */
+  }
+  
+  /* Style for the flex container */
+  .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Style for the logo or branding */
+  .text-3xl {
+    font-size: 1.5rem; /* Adjust font size */
+    font-weight: bold;
+    letter-spacing: 0.1em; /* Adjust letter spacing */
+  }
+  
+  /* Style for the contact information */
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Style for the horizontal rule */
+  .my-6 {
+    margin-top: 1.5rem; /* Adjust top margin */
+    margin-bottom: 1.5rem; /* Adjust bottom margin */
+    border-color: rgba(255, 255, 255, 0.5); /* Adjust color and opacity */
+  }
+  
+  /* Style for the text in the footer */
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Style for the links in the footer */
+  .text-zinc-50 {
+    color: #ffffff; /* Adjust link color */
+  }
+  
+  .text-zinc-50:hover {
+    color: #f0f0f0; /* Adjust link hover color */
+    transition: color 0.3s;
+  }
+  
+  /* Additional styles for specific elements */
+  
+  /* Example styles for the address, phone, and email */
+  .text-sm {
+    font-size: 0.875rem; /* Adjust font size */
+  }
+  
+  /* Example styles for the copyright text */
+  .text-center > p {
+    font-size: 0.875rem; /* Adjust font size */
+  }
+  
+  /* Example styles for the privacy policy and terms of service links */
+  .flex.justify-center.space-x-4 > a {
+    font-size: 0.875rem; /* Adjust font size */
+    text-decoration: none;
+  }
+  
+  .flex.justify-center.space-x-4 > a:hover {
+    color: #f0f0f0; /* Adjust link hover color */
+    transition: color 0.3s;
+  }
+  
